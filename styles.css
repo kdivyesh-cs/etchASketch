@@ -1,0 +1,47 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: sans-serif, Arial;
+}
+
+.🔝 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.gridSizeBtn {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+}
+.gridSizeBtn button{
+    border-radius: 12px;
+    font-size: x-large;
+}
+
+.outerCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.gridCon{
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.gridItem {
+    padding: 2vw;
+    aspect-ratio: 1;
+    border: 0.1vw solid black;
+}
+
+.color {
+    background-color: green;
+}

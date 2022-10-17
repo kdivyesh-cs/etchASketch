@@ -26,14 +26,21 @@ function main(inputval) {
 };
 
 main(16);
-
+var newSize = null;
 //eventlistner for submitted gridsize
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (GridSize.value > 100 || GridSize.value < 1  ) {
         alert("invalid Input\nMax:64, Min: 1");
     } else {
-        main(GridSize.value)
+        newSize = GridSize.value;
+        main(newSize)
     };
 });
 
+
+//selecting reset button
+reset = document.querySelector("#reset");
+reset.addEventListener("click", function () {
+    main(16);
+});

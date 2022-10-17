@@ -1,47 +1,70 @@
 body, html {
     margin: 0;
     padding: 0;
+    background-color: #ededed;
 }
 
 * {
     font-family: sans-serif, Arial;
+    box-sizing: border-box;
 }
+
 
 .🔝 {
+    height: 10vh;
+    padding-left: 25%;
     text-align: center;
-    font-size: x-large;
+    text-decoration: underline;
+    font-size: 2rem;
+    color: #3B3B3B;
 }
 
-.gridSizeBtn {
-    font-size: x-large;
+.content {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    height: 85vh;
+}
+
+
+
+.settings {
+    color: #3B3B3B; 
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 7%;
+    font-weight: bolder;
+    height: 100%;
+    gap: 40px;
+}
+
+.gridSizeDiv, label {
+    font-size: 1.5rem;
     font-weight: bold;
-
+    text-decoration: none;
 }
-.gridSizeBtn button{
+
+#GridSize, .button{
     border-radius: 12px;
-    font-size: x-large;
+    font-size: 1.2rem;
 }
 
-.outerCon{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.gridCon{
+.gridCon {
     border: 5px solid black;
+    aspect-ratio: 1;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    position: relative;
 }
 
-.gridItem {
-    padding: 2vw;
-    aspect-ratio: 1;
-    border: 0.1vw solid black;
-}
+
 
 .color {
-    background-color: green;
+    background-color: black;
+}
+
+#reset {
+    font-size: 1.4rem;
+    color: #3B3B3B;
+    font-weight: bolder;
 }

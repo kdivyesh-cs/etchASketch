@@ -10,11 +10,26 @@
 </head>
 <body>
     <div class="🔝"><h1>Etch a Sketch</h1></div>
-    <div class="gridSizeBtn">Grid Size:   <button id = "button" type="button">16 X 16</button></div>
-    <div class="outerCon">
-        <div class="gridCon">
+
+    <div class="content">
+
+        <div class="settings"><h2>Settings</h2>
+            <div class="gridSizeDiv">
+                <form id = "form" action="/" method="GET">
+                    <div>
+                        <label for="GridSize">Grid Size(n):</label><br>
+                        <input type="number" id="GridSize" name="GridSize" placeholder="n x n grid">    
+                    </div>
+                    <button class="button" type="submit">Submit</button>
+                </form>
+            </div>
+            
         </div>
+
+        <div class="gridCon"></div>
+
     </div>
+    
     
 </body>
 </html>

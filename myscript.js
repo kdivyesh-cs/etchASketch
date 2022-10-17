@@ -1,48 +1,39 @@
-
-//input : grid size
-var input = 16;
-//selecting button
-const button = document.getElementById("button")
-//selecting gridCon
+//selecting gridContainer
 const gridCon = document.querySelector(".gridCon");
+//selecting form input
+const GridSize = document.getElementById("GridSize");
+//selecting form
+const form = document.querySelector("#form")
 
-//event listener for grid size prompt on button click
-button.addEventListener("click", function getinpt(e) {
-        gridCon.innerHTML = "";
-        input = prompt("choose n by n grid \n Note: max grid size = 100");
-        if (input < 1 || input > 100) {
-            alert("invalid input, enter again");
-            getinpt();
-        };
-        makeGrid(input);
-    });
-
-
-
-
-// function for making making n by n grid
-function makeGrid(inpt){
-    for (i=0; i<inpt**2; i++) {
-        var aDiv = document.createElement("div");
-        gridCon.append(aDiv);
-        aDiv.classList.add("gridItem");
+//function for making grid of input size or default of 16x16 anding mouseover eventlistener over each grid block
+function main(inputval) {
+    gridCon.innerHTML="";
+    gridCon.style.gridTemplateColumns = `repeat(${inputval}, 1fr)`
+    for(i=0;i<inputval**2;i++) {
+        var block = document.createElement("div");
+        gridCon.append(block);
+        block.classList.add("gridItem");
+        block.style.aspectRatio = "1";
     };
-}
+    
+    //hover effect
+    const gridItemList = [...document.querySelectorAll(".gridItem")];
+    gridItemList.forEach(item => {
+    item.addEventListener("mouseover", function (e){
+        item.classList.add("color");
+    });
+});
+};
 
-makeGrid(input)
+main(16);
 
-//list of all grid
-const gridB = [...document.querySelectorAll(".gridItem")];
+//eventlistner for submitted gridsize
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (GridSize.value > 100 || GridSize.value < 1  ) {
+        alert("invalid Input\nMax:64, Min: 1");
+    } else {
+        main(GridSize.value)
+    };
+});
 
-
-//event listener for changing color each grid item
-
-for (i=0; i<gridB.length; i++) {
-    gridB[i].addEventListener("mouseover",e =>{
-        e.target.classList.add("color");
-    })
-
-    gridB[i].addEventListener("touchmove",e =>{
-        e.target.classList.add("color");
-    })
-}

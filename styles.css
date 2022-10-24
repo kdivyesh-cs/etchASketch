@@ -1,70 +1,79 @@
+:root {
+    --bgColor : #ededed;
+    --fontColor: #3b3b3b;
+}
+
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #ededed;
+    background-color: var(--bgColor);
 }
 
 * {
     font-family: sans-serif, Arial;
     box-sizing: border-box;
+    color: var(--fontColor);
 }
 
 
 .🔝 {
-    height: 10vh;
-    padding-left: 25%;
-    text-align: center;
+    text-align: center;    
+    font-size: calc(2rem + 2vw);
     text-decoration: underline;
-    font-size: 2rem;
-    color: #3B3B3B;
 }
+
+h1 {
+    margin: 1% auto;   
+}
+
 
 .content {
     display: flex;
-    justify-content: space-evenly;
-    height: 85vh;
+    justify-content: center;
+    height: 70vh;
+    flex-wrap: wrap;
+    height: fit-content;
+    flex-shrink: 2;
 }
-
 
 
 .settings {
-    color: #3B3B3B; 
-    font-size: 2.4rem;
+    font-size: calc(2.4rem + 1vw);
     display: flex;
-    flex-direction: column;
     justify-content: start;
-    padding-top: 5%;
+    flex-direction: column;
+    padding-top: 6vh;
     font-weight: bolder;
     height: 100%;
-    gap: 40px;
+    gap: 2vh;
 }
 
-.gridSizeDiv, label {
-    font-size: 1.5rem;
+
+
+.gridSizeDiv, label, #reset {
+    font-size: calc(1.5rem + 1vw);
     font-weight: bold;
     text-decoration: none;
+    color: var(--fontColor);
 }
+
 
 #GridSize, .button{
     border-radius: 12px;
     font-size: 1.2rem;
 }
 
+
 .gridCon {
-    border: 5px solid black;
+    box-shadow: 5px 5px 10px black;
     aspect-ratio: 1;
     display: grid;
-    position: relative;
+    width: min(50%, 100vw);
+    height: max-content;
 }
-
 
 
 .color {
     background-color: black;
 }
 
-#reset {
-    font-size: 1.4rem;
-    color: #3B3B3B;
-    font-weight: bolder;
-}

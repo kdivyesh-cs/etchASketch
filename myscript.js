@@ -30,7 +30,7 @@ var newSize = null;
 //eventlistner for submitted gridsize
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (GridSize.value > 100 || GridSize.value < 1  ) {
+    if (GridSize.value > 64 || GridSize.value < 1  ) {
         alert("invalid Input\nMax:64, Min: 1");
     } else {
         newSize = GridSize.value;

@@ -1,14 +1,15 @@
 //selecting gridContainer
-const gridCon = document.querySelector(".gridCon");
+const gridCon = document.querySelector("#gridCon");
 //selecting form input
-const GridSize = document.getElementById("GridSize");
+const GridSize = document.querySelector("#GridSize");
 //selecting form
-const form = document.querySelector("#form")
+const form = document.querySelector("#gridSizeForm")
 
 //function for making grid of input size or default of 16x16 anding mouseover eventlistener over each grid block
 function main(inputval) {
     gridCon.innerHTML="";
     gridCon.style.gridTemplateColumns = `repeat(${inputval}, 1fr)`
+    gridCon.style.gridTemplateRows = `repeat(${inputval}, 1fr)`
     for(i=0;i<inputval**2;i++) {
         var block = document.createElement("div");
         gridCon.append(block);

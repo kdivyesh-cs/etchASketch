@@ -4,32 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EtchASketch</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./myscript.js" defer></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- settings icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- draw icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- reset icon -->
+    <link rel="stylesheet" href="https://fonts,0..1,.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- grid on icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- nextPlan icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
-    <div class="🔝"><h1>Etch a Sketch</h1></div>
+    <header><h1><span style="font-size: 2.9rem;" class="material-symbols-outlined">draw </span>Etch a Sketch</h1></header>
 
-    <div class="content">
-
-        <div class="settings"><h2>Settings</h2>
-            <div class="gridSizeDiv">
-                <form id = "form" action="/" method="GET">
-                    <div>
-                        <label for="GridSize">Grid Size(n):</label><br>
-                        <input type="number" id="GridSize" name="GridSize" placeholder="n x n grid">    
+    <!-- CONTENT -->
+    <main>
+        <!-- LEFT -->
+        <fieldset>
+            <legend>
+                <span style="font-size: 2.4rem;" class="material-symbols-outlined">settings</span>
+                <h2>Settings</h2>
+            </legend>
+            <!-- setting 1 -->
+            <div id="gridSizeDiv">
+                <form id = "gridSizeForm" action="/" method="GET">
+                    <label class="setting" for="GridSize"><span style="font-size: 1.3rem;" class="material-symbols-outlined">grid_on
+                        </span> Grid Size(n):</label><br>
+                    <div id="formOption">
+                        <input type="number" id="GridSize" name="GridSize" placeholder="n x n grid">
+                        <button class="button" type="submit"><span style="font-size: 1.3rem;" class="material-symbols-outlined">
+                            next_plan
+                            </span></button>
                     </div>
-                    <button class="button" type="submit">Submit/Clear</button>
                 </form>
             </div>
-            <div><button class="button" id="reset">Reset to default</button></div>
+            <!-- setting 2 -->
+            <button class="setting button" id="reset"><span style="font-size: 1.3rem;" class="material-symbols-outlined">device_reset</span></button>
+        </fieldset>
+        <!-- RIGHT -->
+        <div id="gridCon">
         </div>
+    </main>
 
-        <div class="gridCon"></div>
-
-    </div>
-    
-    
 </body>
 </html>

@@ -17,6 +17,12 @@ function main(inputval) {
         block.style.aspectRatio = "1";
     };
     
+    const gridItemList = [...document.querySelectorAll(".gridItem")];
+    gridItemList.forEach(item => {
+    item.addEventListener("touchmove", function (e){
+        item.classList.add("color");
+    })
+
     //hover effect
     const gridItemList = [...document.querySelectorAll(".gridItem")];
     gridItemList.forEach(item => {

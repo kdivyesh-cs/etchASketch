@@ -1,19 +1,24 @@
 :root {
-    --fontColor: #cab17d;
-    --secColor: #566f6f;
+    --secColor: #ddd;
+    --background: #F0EEF1;
+    --green: #9FFF9C;
+    --font: #050505;
+    --red: #FF9C9C;
+    /* border */
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 body, html {
     margin: 0;
     padding: 0;
     background-color: var(--bgColor);
-    font-family: Roboto, sans-serif;
-    background-image: linear-gradient(to top left, #DECBA4, #3E5151);
+    font-family: "Poppins", sans-serif;
+    background-image: var(--background);
     background-attachment: fixed;
 }
 
 *{
-    color: var(--fontColor);
+    color: var(--font);
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -23,17 +28,9 @@ body, html {
   'opsz' 48
 }
 
-.material-symbols-outlined-logo {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 500,
-    'GRAD' 0,
-    'opsz' 48
-  }
-  
-
 header {
     text-align: center;
+    box-shadow: var(--shadow);
 }
 
 h1 {
@@ -76,6 +73,7 @@ h2 {
 #reset {
     width: fit-content;
     border: none;
+    align-self: center;
 }
 
 input {
@@ -96,11 +94,9 @@ input {
     border: 10px solid #ddd;
 }
 
-#gridCon > div {
-}
 
 .color {
-    background-color: var(--secColor);
+    background-color: var(--font);
 }
 
 #gridSize, button {

@@ -13,8 +13,7 @@ body, html {
     padding: 0;
     background-color: var(--bgColor);
     font-family: "Poppins", sans-serif;
-    background-image: var(--background);
-    background-attachment: fixed;
+    background-color: var(--background);
 }
 
 *{
